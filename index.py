@@ -17,5 +17,3 @@ print(funcionOrdenadora(listaNumeros))
 print(funcionOrdenadora(desordenados))
 
 
-
-#Ejercicio N°2
