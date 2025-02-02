@@ -1,21 +1,30 @@
-#Ejercicio N°1
-listaNumeros=[10,2,5,1,4,9];
-desordenados=[100,5,101,500,2,65,1000,6,8,3,1]
-
-def funcionOrdenadora(lista):
-	n=len(lista);
-	temporario=0;
-	for i in range(n):  
-		for j in range(n-i-1):
-				if lista[j]>lista[j+1]:
-					temporario=lista[j];				
-					lista[j]=lista[j+1];
-					lista[j+1] = temporario;  
-	return lista;
-  
-print(funcionOrdenadora(listaNumeros))
-print(funcionOrdenadora(desordenados))
-
-
-
 #Ejercicio N°2
+"""
+Crear un programa que permita crear un conjunto desde cero y 
+despues me permita eliminar un elemento de un conjunto si esta presente en 
+el conjunto
+"""
+
+def crearConjunto(*args):
+	conjunto = set(args);
+	return conjunto;
+
+conjunto1 =crearConjunto(1,5,5,6,8,10,5,3,5,9)
+conjunto2 =crearConjunto(10,50,500,6,8,1000,50,30,50,90)
+ 
+#print(conjunto1)
+
+def eliminarElementoConjunto(elemento,conjunto):
+		if elemento in conjunto:
+				conjunto.discard(elemento);
+				return f'El elemento {elemento} a sido eliminado, el conjunto resultante es {conjunto}'
+		else: 
+				return(f"elemento {elemento} no fue encontrado el conjunto queda {conjunto}")
+
+resultado1 = eliminarElementoConjunto(1,conjunto1);
+resultado2 = eliminarElementoConjunto(1,conjunto2);
+
+print(resultado2)
+print(resultado1)
+
+
