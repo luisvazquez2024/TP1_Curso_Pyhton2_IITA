@@ -1,30 +1,17 @@
-#Ejercicio N°2
+#Ejercicio N°3
 """
-Crear un programa que permita crear un conjunto desde cero y 
-despues me permita eliminar un elemento de un conjunto si esta presente en 
-el conjunto
+Dados dos conjuntos de numeros, escribe un programa para encontrar los
+numeros que faltan en el segundo conjunto en comparacion con 
+el primero y viceversa.
+
 """
+conjunt1= {1,2,3,4,5,6}
+conjunt2= {5,6,7,8,9,10}
 
-def crearConjunto(*args):
-	conjunto = set(args);
-	return conjunto;
+def encontrarNumeroFaltantes(conj1, conj2):
+  elementosFaltantes2 = conj1 - conj2;
+  elementosFaltantes1 = conj2 - conj1;
+  
+  return (f"Los numeros que faltan el conjunto 1 son {elementosFaltantes1} y los numeros faltantes en el conjunto 2 son {elementosFaltantes2}");
 
-conjunto1 =crearConjunto(1,5,5,6,8,10,5,3,5,9)
-conjunto2 =crearConjunto(10,50,500,6,8,1000,50,30,50,90)
- 
-#print(conjunto1)
-
-def eliminarElementoConjunto(elemento,conjunto):
-		if elemento in conjunto:
-				conjunto.discard(elemento);
-				return f'El elemento {elemento} a sido eliminado, el conjunto resultante es {conjunto}'
-		else: 
-				return(f"elemento {elemento} no fue encontrado el conjunto queda {conjunto}")
-
-resultado1 = eliminarElementoConjunto(1,conjunto1);
-resultado2 = eliminarElementoConjunto(1,conjunto2);
-
-print(resultado2)
-print(resultado1)
-
-
+print(encontrarNumeroFaltantes(conjunt1,conjunt2))
