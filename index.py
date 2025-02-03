@@ -1,18 +1,20 @@
-#Ejercicio N°6
+#Ejercicio N°7
 """
-Crea una funcion llamada contar ocurrencias que reciba una lista
-y un elemento, y devuelva cuantas veces aparece ese elemento en esa lista
-ej lista=[1,2,2,3,2,4] 
-la funcion deberia devolver 3 si el elemento es 2
+Crea una funcion funcion recursiva llamada suma_recursiva que reciba un numero n
+y devuelva la suma de los primeros n numeros naturales, ej suma_recursica(5)
+ debe devolver 15(1+2+3+4+5)
+
 """
 
-lista=[1,2,2,3,3,3,3,3,3,2,4] 
-def contarOcurrencias(lista, elemento):
-		contador=0;	
-		for e in lista:
-				if e== elemento:
-							contador+=1;
-		return f"la cantidad de ocurrencias del elemento {elemento} es de {contador}"
+
+def suma_recursiva(n):
+		suma=0;	
+		i =1;	
+		while(i <= n):
+				#print(i)
+				suma+=i;
+				i+=1;
+		return suma;
+print(suma_recursiva(5))
 
 
-print(contarOcurrencias(lista,3))
