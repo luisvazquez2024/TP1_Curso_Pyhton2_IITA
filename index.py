@@ -1,26 +1,24 @@
-#Ejercicio N°4
+#Ejercicio N°5
 """
-Escriba un programa en python para eliminar todos los duplicados
-de una lista de cadenas dada y devolver una lista de cadena unica
+Crea una funcion llamada factorial que reciba un numero entero positivo
+y devuelva su factorial . ejemplo factorial(4) debe devolver 24.
 """
 
-lista=['a', 'b','b','c','d','d', 'e'];
-lista1=['a','a', 'a','b','b','c','c','d','d', 'e'];
 
-cadena=["Perro", "Gato", "Perro", "Oso","oso","Elefante"]
+def factorial(n):
+  if n<0:
+    print("El numero debe ser positivo..!");
+  elif n ==0 | n == 1:
+    return 1;
+  else:
+    res =1;
+    for i in range(2,n+1):
+      res*=i;
+    return res;        
 
 
-def listaCadenaUnica(lista):
-	listminus=[i.lower() for i in lista]
-	nuevaLista=[];
-	for i in listminus:
-		if i not in nuevaLista:
-			nuevaLista.append(i);	
-	return nuevaLista		
-  
 
-print(listaCadenaUnica(cadena))
-print(listaCadenaUnica(lista))
-print(listaCadenaUnica(lista1))
-   
- 
+
+print(factorial(0)); 
+print(factorial(3)); 
+print(factorial(4)); 
