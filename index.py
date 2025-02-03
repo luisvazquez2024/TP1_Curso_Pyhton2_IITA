@@ -1,24 +1,18 @@
-#Ejercicio N°5
+#Ejercicio N°6
 """
-Crea una funcion llamada factorial que reciba un numero entero positivo
-y devuelva su factorial . ejemplo factorial(4) debe devolver 24.
+Crea una funcion llamada contar ocurrencias que reciba una lista
+y un elemento, y devuelva cuantas veces aparece ese elemento en esa lista
+ej lista=[1,2,2,3,2,4] 
+la funcion deberia devolver 3 si el elemento es 2
 """
 
-
-def factorial(n):
-  if n<0:
-    print("El numero debe ser positivo..!");
-  elif n ==0 | n == 1:
-    return 1;
-  else:
-    res =1;
-    for i in range(2,n+1):
-      res*=i;
-    return res;        
+lista=[1,2,2,3,3,3,3,3,3,2,4] 
+def contarOcurrencias(lista, elemento):
+		contador=0;	
+		for e in lista:
+				if e== elemento:
+							contador+=1;
+		return f"la cantidad de ocurrencias del elemento {elemento} es de {contador}"
 
 
-
-
-print(factorial(0)); 
-print(factorial(3)); 
-print(factorial(4)); 
+print(contarOcurrencias(lista,3))
