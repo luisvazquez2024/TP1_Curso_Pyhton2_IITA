@@ -1,17 +1,26 @@
-#Ejercicio N°3
+#Ejercicio N°4
 """
-Dados dos conjuntos de numeros, escribe un programa para encontrar los
-numeros que faltan en el segundo conjunto en comparacion con 
-el primero y viceversa.
-
+Escriba un programa en python para eliminar todos los duplicados
+de una lista de cadenas dada y devolver una lista de cadena unica
 """
-conjunt1= {1,2,3,4,5,6}
-conjunt2= {5,6,7,8,9,10}
 
-def encontrarNumeroFaltantes(conj1, conj2):
-  elementosFaltantes2 = conj1 - conj2;
-  elementosFaltantes1 = conj2 - conj1;
+lista=['a', 'b','b','c','d','d', 'e'];
+lista1=['a','a', 'a','b','b','c','c','d','d', 'e'];
+
+cadena=["Perro", "Gato", "Perro", "Oso","oso","Elefante"]
+
+
+def listaCadenaUnica(lista):
+	listminus=[i.lower() for i in lista]
+	nuevaLista=[];
+	for i in listminus:
+		if i not in nuevaLista:
+			nuevaLista.append(i);	
+	return nuevaLista		
   
-  return (f"Los numeros que faltan el conjunto 1 son {elementosFaltantes1} y los numeros faltantes en el conjunto 2 son {elementosFaltantes2}");
 
-print(encontrarNumeroFaltantes(conjunt1,conjunt2))
+print(listaCadenaUnica(cadena))
+print(listaCadenaUnica(lista))
+print(listaCadenaUnica(lista1))
+   
+ 
