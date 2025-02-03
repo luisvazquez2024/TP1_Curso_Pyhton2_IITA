@@ -1,21 +1,18 @@
-#Ejercicio N°1
-listaNumeros=[10,2,5,1,4,9];
-desordenados=[100,5,101,500,2,65,1000,6,8,3,1]
+#Ejercicio N°6
+"""
+Crea una funcion llamada contar ocurrencias que reciba una lista
+y un elemento, y devuelva cuantas veces aparece ese elemento en esa lista
+ej lista=[1,2,2,3,2,4] 
+la funcion deberia devolver 3 si el elemento es 2
+"""
 
-def funcionOrdenadora(lista):
-	n=len(lista);
-	temporario=0;
-	for i in range(n):  
-		for j in range(n-i-1):
-				if lista[j]>lista[j+1]:
-					temporario=lista[j];				
-					lista[j]=lista[j+1];
-					lista[j+1] = temporario;  
-	return lista;
-  
-print(funcionOrdenadora(listaNumeros))
-print(funcionOrdenadora(desordenados))
+lista=[1,2,2,3,3,3,3,3,3,2,4] 
+def contarOcurrencias(lista, elemento):
+		contador=0;	
+		for e in lista:
+				if e== elemento:
+							contador+=1;
+		return f"la cantidad de ocurrencias del elemento {elemento} es de {contador}"
 
 
-
-#Ejercicio N°2
+print(contarOcurrencias(lista,3))
