@@ -1,20 +1,28 @@
-#Ejercicio N°7
+#Ejercicio N°8
 """
-Crea una funcion funcion recursiva llamada suma_recursiva que reciba un numero n
-y devuelva la suma de los primeros n numeros naturales, ej suma_recursica(5)
- debe devolver 15(1+2+3+4+5)
+Crea una clase Libro con los atributos titulo, autor , y año_publicacion.  
+Luego crea una subclase llamada LibroDigital 
+que tenga un atributo adicional   
 
 """
 
-
-def suma_recursiva(n):
-		suma=0;	
-		i =1;	
-		while(i <= n):
-				#print(i)
-				suma+=i;
-				i+=1;
-		return suma;
-print(suma_recursiva(5))
+class Libro:
+  def __init__(self, titulo, autor, año_publicacion):
+			self.titulo=titulo;
+			self.autor=autor;
+			self.año_publicacion= año_publicacion;
 
 
+class LibroDigital(Libro):
+	def __init__(self, titulo, autor, año_publicacion, genero):
+		super().__init__(titulo, autor, año_publicacion)
+		self.genero=genero;
+	def mostrar_informacion(self):
+			print(f'Este es un libro llamado {self.titulo} y es del autor {self.autor} publicado en el año {self.año_publicacion}. y versa sobre {self.genero}')
+  
+  
+  
+LibroDigitalCiencia=LibroDigital("La ciencia","LV",1888,"ciencia ficcion")
+
+
+LibroDigitalCiencia.mostrar_informacion()
